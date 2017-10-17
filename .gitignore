@@ -3,7 +3,9 @@
 # IntelliJ project files
 .idea
 *.iml
-out
+out/
+project/
 gen### Scala template
 *.class
 *.log
+target/
