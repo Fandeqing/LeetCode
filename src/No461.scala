@@ -1,7 +1,7 @@
 /**
   * Created by wqlin on 17-10-17 09:33.
   */
-object Solution {
+object No461 {
   def calDistance(x: Int): Int = {
     if (x == 0) 0
     else 1 + calDistance(x & (x - 1))
