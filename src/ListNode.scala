@@ -11,3 +11,14 @@ class ListNode(var _x: Int = 0) {
   var next: ListNode = _
   var x: Int = _x
 }
+
+object ListNode {
+  def apply(num: Int*): ListNode = {
+    if (num.isEmpty) null else {
+      num.map(new ListNode(_)).reduceRight((node, res) => {
+        node.next = res
+        node
+      })
+    }
+  }
+}
