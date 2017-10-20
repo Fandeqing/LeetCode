@@ -13,9 +13,9 @@ class ListNode(var _x: Int = 0) {
 }
 
 object ListNode {
-  def apply(num: Int*): ListNode = {
-    if (num.isEmpty) null else {
-      num.map(new ListNode(_)).reduceRight((node, res) => {
+  def apply(nums: Int*): ListNode = {
+    if (nums.isEmpty) null else {
+      nums.map(new ListNode(_)).reduceRight((node, res) => {
         node.next = res
         node
       })

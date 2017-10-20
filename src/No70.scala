@@ -1,7 +1,7 @@
 /**
   * Created by wqlin on 17-10-19 16:46.
   */
-class No70 {
+object No70 {
   var cache: Map[Int, Int] = Map(0 -> 1, 1 -> 1)
 
   def climbStairs(n: Int): Int =
