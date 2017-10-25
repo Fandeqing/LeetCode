@@ -10,6 +10,17 @@ class ListNode(var _x: Int = 0) {
 
   var next: ListNode = _
   var x: Int = _x
+
+  override def toString: String = {
+    val sb = new StringBuilder
+    sb ++= x.toString
+    var p = this.next
+    while (p != null) {
+      sb ++= "->" + p.x.toString
+      p = p.next
+    }
+    sb.toString()
+  }
 }
 
 object ListNode {
