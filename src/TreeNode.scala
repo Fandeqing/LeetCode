@@ -18,7 +18,10 @@ class TreeNode(var _value: Int) {
 object TreeNode {
   def apply(values: Any*): TreeNode = {
     val len = values.length
-    val nodes = values.map(value => if (value == null) null else new TreeNode(value.asInstanceOf[Int]))
+    val nodes = values.map {
+      case v: Int => new TreeNode(v)
+      case _ => null
+    }
     nodes.zipWithIndex.foreach { case (node, index) =>
       if (index * 2 + 1 < len) node.left = nodes(index * 2 + 1)
       if (index * 2 + 2 < len) node.right = nodes(index * 2 + 2)
