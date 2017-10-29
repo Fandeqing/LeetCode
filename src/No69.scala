@@ -3,19 +3,19 @@
   */
 object No69 {
   def mySqrt(x: Int): Int = {
-    def mySqrt(guess: Int, x: Int): Int =
-      if (isGoodEnough(guess, x))
+    def mySqrt(guess: Int): Int =
+      if (isGoodEnough(guess))
         guess
       else
-        mySqrt(improve(guess, x), x)
+        mySqrt(improve(guess))
 
-    def isGoodEnough(guess: Long, x: Long): Boolean =
+    def isGoodEnough(guess: Long): Boolean =
       if (guess * guess <= x && (guess + 1) * (guess + 1) > x)
         true
       else false
 
-    def improve(guess: Long, x: Long): Int = ((guess + x / guess) / 2).toInt
+    def improve(guess: Long): Int = ((guess + x / guess) / 2).toInt
 
-    mySqrt(1, x)
+    mySqrt(1)
   }
 }
