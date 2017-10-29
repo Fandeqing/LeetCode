@@ -17,14 +17,14 @@ object No206 {
     }
 
   //another recursive solution is as follows:
-  def reverseList(head: ListNode): ListNode = {
-    if (head == null || head.next == null) head
-    else {
-      val tail = head.next
-      head.next = null
-      val res = reverseList(tail)
-      tail.next = head
-      res
-    }
-  }
+//  def reverseList(head: ListNode): ListNode = {
+  //    if (head == null || head.next == null) head
+  //    else {
+  //      val tail = head.next
+  //      head.next = null
+  //      val res = reverseList(tail)
+  //      tail.next = head
+  //      res
+  //    }
+  //  }
 }
