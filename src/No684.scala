@@ -25,7 +25,7 @@ object No684 {
       }
     }
 
-    edges.view.filterNot {
+    edges.filterNot {
       case Array(p, q)
       => union(p, q)
     }.last
