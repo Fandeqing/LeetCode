@@ -8,6 +8,7 @@ object No128 {
     val parent = (0 until len).toArray
     val size = Array.fill(len)(1)
 
+    @annotation.tailrec
     def root(p: Int): Int =
       if (p != parent(p)) {
         parent(p) = parent(parent(p))

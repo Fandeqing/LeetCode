@@ -3,6 +3,7 @@
   */
 object No103 {
   def zigzagLevelOrder(root: TreeNode): List[List[Int]] = {
+    @annotation.tailrec
     def zigzagLevelOrder(curLevel: List[TreeNode], res: List[List[Int]], isReverse: Boolean): List[List[Int]] = {
       if (curLevel.isEmpty)
         res

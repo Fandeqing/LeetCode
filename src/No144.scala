@@ -4,6 +4,7 @@
 object No144 {
   def preorderTraversal(root: TreeNode): List[Int] = {
     // stack + tail recursive
+    @annotation.tailrec
     def preorderTraversal(stack: List[TreeNode], res: List[Int]): List[Int] = stack match {
       case h :: t =>
         val r = h.value :: res

@@ -3,6 +3,7 @@
   */
 object No107 {
   def levelOrderBottom(root: TreeNode): List[List[Int]] = {
+    @annotation.tailrec
     def levelOrderBottom(curLevel: List[TreeNode], res: List[List[Int]]): List[List[Int]] =
       if (curLevel.isEmpty)
         res

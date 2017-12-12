@@ -3,6 +3,7 @@
   */
 object No637 {
   def averageOfLevels(root: TreeNode): Array[Double] = {
+    @annotation.tailrec
     def averageOfLevels(curLevel: List[TreeNode], res: List[Double]): Array[Double] =
       if (curLevel.isEmpty)
         res.reverse.toArray

@@ -3,6 +3,7 @@
   */
 object No125 {
   def isPalindrome(s: String): Boolean = {
+    @annotation.tailrec
     def isPalindrome(lo: Int, hi: Int): Boolean = {
       if (lo >= hi) true
       else if (!s(lo).isLetterOrDigit)

@@ -1,5 +1,3 @@
-import scala.annotation.tailrec
-
 /**
   * Created by wqlin on 17-12-1 14:09.
   */
@@ -22,7 +20,7 @@ object No685 {
           }
       }
 
-    @tailrec
+    @annotation.tailrec
     def hasLoop(parent: Array[Int], i: Int): Boolean =
       if (parent(i) == i) false
       else if (parent(i) == _child) true
@@ -36,6 +34,7 @@ object No685 {
     def findRedundantDirectedConnection(): Array[Int] = {
       val parent = (0 to length).toArray
 
+      @annotation.tailrec
       def root(p: Int): Int =
         if (parent(p) != p) {
           parent(p) = parent(parent(p))
@@ -50,7 +49,7 @@ object No685 {
         parent(rootQ) = rootP
       }
 
-      @tailrec
+      @annotation.tailrec
       def loop(i: Int): Array[Int] = edges(i) match {
         case Array(p, q) =>
           if (connected(p, q)) edges(i)

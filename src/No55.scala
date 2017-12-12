@@ -3,6 +3,7 @@
   */
 object No55 {
   def canJump(nums: Array[Int]): Boolean = {
+    @annotation.tailrec
     def canJump(i: Int, len: Int, farthest: Int): Boolean = {
       if (i == len - 1) farthest >= i
       else if (farthest < i) false

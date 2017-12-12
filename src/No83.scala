@@ -3,6 +3,7 @@
   */
 object No83 {
   def deleteDuplicates(head: ListNode): ListNode = {
+    @annotation.tailrec
     def delete(head: ListNode): ListNode =
       if (head == null || head.next == null) head
       else if (head.x == head.next.x) {

@@ -6,6 +6,7 @@ object No684 {
     val length = edges.length
     val parent = (0 to length).toArray
 
+    @annotation.tailrec
     def root(p: Int): Int =
       if (p != parent(p)) {
         parent(p) = parent(parent(p))

@@ -22,6 +22,7 @@ object No200 {
 
       def canMoveDown(i: Int, j: Int) = i + 1 < rowLen
 
+      @annotation.tailrec
       def root(p: Int): Int =
         if (p != parent(p)) {
           parent(p) = parent(parent(p)) // path compression

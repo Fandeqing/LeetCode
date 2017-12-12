@@ -4,6 +4,7 @@
 
 object No102 {
   def levelOrder(root: TreeNode): List[List[Int]] = {
+    @annotation.tailrec
     def levelOrder(curLevel: List[TreeNode], res: List[List[Int]]): List[List[Int]] =
       if (curLevel.isEmpty)
         res
