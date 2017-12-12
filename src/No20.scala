@@ -5,6 +5,7 @@ object No20 {
   val m = Map('(' -> ')', '{' -> '}', '[' -> ']')
 
   def isValid(s: String): Boolean = {
+    @annotation.tailrec
     def isValid(i: Int, len: Int, ls: List[Char]): Boolean =
       if (i == len)
         ls.isEmpty

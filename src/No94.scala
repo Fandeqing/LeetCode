@@ -4,6 +4,7 @@
 object No94 {
   def inorderTraversal(root: TreeNode): List[Int] = {
     //stack + tail recursive
+    @annotation.tailrec
     def enstack(root: TreeNode, stack: List[TreeNode]): List[TreeNode] =
       if (root == null) stack
       else enstack(root.left, root :: stack)

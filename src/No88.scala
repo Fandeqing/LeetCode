@@ -3,6 +3,7 @@
   */
 object No88 {
   def merge(nums1: Array[Int], m: Int, nums2: Array[Int], n: Int): Unit = {
+    @annotation.tailrec
     def merge(m: Int, n: Int, index: Int): Unit = {
       if (index < 0) Unit
       else if (m >= 0 && n >= 0) {

@@ -3,6 +3,7 @@
   */
 object No69 {
   def mySqrt(x: Int): Int = {
+    @annotation.tailrec
     def mySqrt(guess: Int): Int =
       if (isGoodEnough(guess))
         guess

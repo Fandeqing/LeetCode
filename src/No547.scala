@@ -11,6 +11,7 @@ object No547 {
       val parent = (0 until rowLen * colLen).toArray
       var _count = rowLen
 
+      @annotation.tailrec
       def root(p: Int): Int =
         if (p != parent(p)) {
           parent(p) = parent(parent(p)) // path compression by halving

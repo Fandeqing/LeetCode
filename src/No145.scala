@@ -3,6 +3,7 @@
   */
 object No145 {
   def postorderTraversal(root: TreeNode): List[Int] = {
+    @annotation.tailrec
     def postorderTraversal(stack: List[TreeNode], res: List[Int]): List[Int] = stack match {
       case h :: t =>
         val r = h.value :: res

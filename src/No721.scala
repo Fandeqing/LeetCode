@@ -7,6 +7,7 @@ object No721 {
 
     val parent = (0 until length).toArray
 
+    @annotation.tailrec
     def root(p: Int): Int =
       if (p != parent(p)) {
         parent(p) = parent(parent(p))

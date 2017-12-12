@@ -23,6 +23,7 @@ object No737 {
       //union similar words
       pairs.foreach { case Array(word1, word2) => union(map(word1), map(word2)) }
 
+      @annotation.tailrec
       def root(p: Int): Int =
         if (p != parent(p)) {
           parent(p) = parent(parent(p))

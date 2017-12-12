@@ -24,6 +24,7 @@ object No227 {
 
     }
 
+    @annotation.tailrec
     def loop(i: Int, valueStack: List[Int], operatorStack: List[Char]): Int =
       if (i >= length) evaluate(valueStack.reverse, operatorStack.reverse)
       else if (s(i) == ' ') loop(i + 1, valueStack, operatorStack)
