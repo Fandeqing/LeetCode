@@ -23,8 +23,8 @@ object TreeNode {
       case _ => null
     }
     nodes.zipWithIndex.foreach { case (node, index) =>
-      if (index * 2 + 1 < len) node.left = nodes(index * 2 + 1)
-      if (index * 2 + 2 < len) node.right = nodes(index * 2 + 2)
+      if (index * 2 + 1 < len && node != null) node.left = nodes(index * 2 + 1)
+      if (index * 2 + 2 < len && node != null) node.right = nodes(index * 2 + 2)
     }
     if (nodes.nonEmpty)
       nodes.head
