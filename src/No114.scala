@@ -8,9 +8,6 @@ object No114 {
         val left = head.left
         val right = head.right
         head.left = null
-
-        if (left != null)
-          head.right = left
         val ls =
           if (left != null && right != null)
             left :: right :: tail
@@ -21,6 +18,8 @@ object No114 {
           else tail
         if (ls.nonEmpty)
           head.right = ls.head
+        else
+          head.right = null
         flatten(ls)
 
       case _ => Unit
