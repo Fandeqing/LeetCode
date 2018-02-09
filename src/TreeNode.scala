@@ -2,7 +2,7 @@
   * Created by wqlin on 17-10-19 11:29.
   * Definition for a binary tree node.
   */
-class TreeNode(var _value: Int) {
+class TreeNode(private var _value: Int) {
 
   def this(_value: Int, left: TreeNode, right: TreeNode) = {
     this(_value)
